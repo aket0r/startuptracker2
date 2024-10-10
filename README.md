@@ -35,5 +35,5 @@ npm i electron --save
 
 > [!NOTE]
 > **Step 3** <br>
-> Go in **release-builds** and run **StartUp Tracker.exe**
+> Go in **release-builds**
 

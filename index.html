@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">
+    <title>StartUp Tracker 2.0</title>
+</head>
+<body>
+    <div class="loading-screen">
+        <img src="assets/icons/loading.gif" alt="">
+        <h1>Loading...</h1>
+    </div>
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <h1 id="title">StartUp Tracker for Windows 10</h1>
+    <div id="buttons">
+        <button id="navigation" data-nav="home"><i class="fa fa-home" aria-hidden="true"></i> home</button>
+        <button id="navigation" data-nav="ip-history"><i class="fa fa-map-marker" aria-hidden="true"></i> IP history</button>
+        <button id="navigation" data-nav="proccess-history"><i class="fa fa-desktop" aria-hidden="true"></i> proccess history</button>
+        <button id="navigation" data-nav="logs"><i class="fa fa-file-text" aria-hidden="true"></i> logs</button>
+    </div>
+    <div id="table">
+        <section id="nav-section" data-location="home" class="">
+            <div class="search">
+                <span class="items-length home-length">0</span>
+                <input type="text" placeholder='search in "home" page'>
+            </div>
+            <div id="item-title">
+                <div>Index  </div>
+                <div>User</div>
+                <div>Date</div>
+                <div>PC</div>
+                <div>IP</div>
+            </div>
+            <div id="list"></div>
+        </section>
+        <section id="nav-section" data-location="ip-history" class="hidden">
+            <div class="search">
+                <span class="items-length ip-history-length">0</span>
+                <input type="text" placeholder='search in "ip-history" page'>
+            </div>
+            <div id="item-title">
+                <div>Date</div>
+                <div>IP</div>
+                <div>Mac</div>
+                <div>SSID</div>
+                <div>Channel</div>
+                <div>Local address</div>
+                <div>Location</div>
+                <div>Native</div>
+                <div>Frequency</div>
+                <div>Security Level</div>
+            </div>
+            <div id="list" class="ip-history-location"></div>
+        </section>
+
+        <section id="nav-section" data-location="proccess-history" class="hidden">
+            <div class="search">
+                <span title="This section has a limit of 150 items to ensure better performance." class="items-length proccess-history-length"><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>0</strong></span>
+                <input type="text" placeholder='search in "proccess-history" page'>
+            </div>
+            <div id="item-title">
+                <div>Index</div>
+                <div>PID</div>
+                <div>Memory Usage</div>
+                <div>Name</div>
+                <div>Session Name</div>
+                <div>Session Number</div>
+            </div>
+            <div id="list" class="process-history"></div>
+        </section>
+        
+        <section id="nav-section" data-location="logs" class="hidden log-section">
+            <div class="search">
+                <span class="items-length logs-length">0</span>
+                <input type="text" placeholder='search in "logs" page'>
+            </div>
+            <div id="list" class="log-location"></div>
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/assets.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="render.js"></script>
+</body>
+</html>

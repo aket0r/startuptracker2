@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+body {
+    background-color: #070c27;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.update {
+    color: lime;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    font-family: monospace;
+    opacity: 0.5;
+    user-select: none;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+#buttons button {
+    background-color: #253aa7;
+    color: white;
+    margin: 0 0 0 0;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-left: 1px solid #314cd6;
+    border-right: 1px solid #314cd6;
+    font-size: 24px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+#buttons button:active {
+    background-color: #142268;
+}
+#buttons button:first-child {
+    margin: 0;
+    border-top-left-radius: 6px;
+    border-left: none;
+}
+#buttons button:last-child {
+    border-top-right-radius: 6px;
+    border-right: none;
+}
+
+
+#title {
+    padding: 15px;
+    font-weight: 100;
+    color: skyblue;
+    text-align: center;
+}
+
+#table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#table section {
+    position: relative;
+    width: 100%;
+}
+
+#table #item-title,
+#table #list #item {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    background: #121d56;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 1px;
+}
+
+#table #item-title div,
+#table #list #item div {
+    padding: 10px;
+    margin: 0;
+    border-right: 2px solid #09144f;
+    color: #ddd;
+    width: calc(100% / 5);
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#table #item-title div:last-child,
+#table #list #item div:last-child {
+    border-right: none;
+}
+#table #list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#table #list .ip-link.active {
+    color: rgb(198, 212, 255) !important;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+#table #list.ip-history-location .main{
+    color: lime !important;
+}
+#table #list.ip-history-location .isVpn{
+    color: #ffbb3f !important;
+}
+#table #list.process-history .new {
+    color: yellow !important;
+}
+#table #list.process-history .mem {
+    color: yellowgreen !important;
+}
+
+#table section.log-section #list{
+    padding: 5px;
+    max-height: calc(55rem + 10px);
+    height: calc(55rem + 10px);
+}
+#table section#nav-section #list #log {
+    color: #fff;
+    background: #09144f;
+    margin-top: 1px;
+    font-size: 14px;
+}
+#table section#nav-section #list #log.warn {
+    color: orange;
+}
+#table section#nav-section #list #log.success {
+    color: lime;
+}
+#table section#nav-section #list #log.error {
+    color: crimson;
+}
+
+.search {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    align-content: center;
+    align-items: center;
+}
+
+.search .items-length {
+    margin-right: 25px;
+}
+.search .items-length i {
+    color: orange;
+}
+
+.search input {
+    background: transparent;
+    border: 1px solid #253aa7;
+    font-size: 18px;
+    padding: 10px 15px;
+    outline: none;
+    font-weight: 100;
+    color: #ddd;
+}
+.items-length .proccess-history {
+    margin-right: 25px;
+}
+
+
+.loading-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #142268;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loading-screen h1 {
+    font-weight: 100;
+}
+.loading-screen img {
+    width: 200px;
+    margin-bottom: 5rem;
+}
+#table section.log-section #list.log-location div{
+    width: 100% !important;
+    overflow-y: auto;
+    color: #ddd;
+    min-height: 50px;
+    height: 100px;
+    resize: both;
+}
+
+#table section.log-section #list.log-location .date-text {
+    width: auto !important;
+    min-width: 200px;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    resize: none;
+    height: 100%;
+}
+#table section.log-section #list.log-location .message {
+    text-align: start !important;
+    overflow: auto !important;
+    white-space: break-spaces !important;
+    height: 100%;
+}

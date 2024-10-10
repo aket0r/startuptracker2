@@ -1,0 +1,24 @@
+{
+  "name": "pst",
+  "version": "1.0.0",
+  "description": "PC Startup Tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"StartUp Tracker\" --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"StartUp Tracker\""
+  },
+  "author": "RikoDiGray",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron": "^25.9.8",
+    "electron-packager": "^17.1.2",
+    "fs": "^0.0.1-security",
+    "geoip-country": "^5.0.202410082342",
+    "node-processlist": "^1.0.2",
+    "node-wifi": "^2.0.16",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}
