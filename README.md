@@ -25,7 +25,7 @@ npm i electron --save
 
 > [!NOTE]
 > **Step 2** <br>
-> Run ``build-win.bat`` or another (OS)
+> Run ``build.cmd``
 
 
 > [!WARNING]
